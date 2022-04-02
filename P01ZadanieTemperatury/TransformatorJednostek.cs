@@ -8,6 +8,13 @@ namespace P01ZadanieTemperatury
 {
     class TransformatorJednostek
     {
+        /// <summary>
+        /// Podaj wartość oraz jednostki, które chcesz transformować
+        /// </summary>
+        /// <param name="wartosc">Wartość do transformacji</param>
+        /// <param name="jednostkaDocelowa">jednostka docelowa do wyboru c,f,k</param>
+        /// <param name="jednostkaWejsciowa">jednostka wejsciowa do wyboru c,f,k</param>
+        /// <returns></returns>
         public double ZamienTemperature(int wartosc, char jednostkaDocelowa, char jednostkaWejsciowa)
         {
             jednostkaDocelowa = Convert.ToChar(jednostkaDocelowa.ToString().ToLower());
@@ -31,6 +38,12 @@ namespace P01ZadanieTemperatury
             if (jednostkaWejsciowa == 'k' && jednostkaDocelowa == 'f')
                 return (wartosc * 1.8) - 459.67;
 
+
+            Console.WriteLine("Podano nieznaną jednostkę");
+
+
+             
+          //  return 0;
             throw new Exception("Podano nieznaną jednostkę"); 
         }
     }

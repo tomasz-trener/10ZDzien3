@@ -9,14 +9,25 @@ namespace P01ZadanieTemperatury
 {
     class ManagerPogody
     {
+        // nazwy metod jezeli publiczne to z Duzej , jak prywatne to z malej
+        // argumenty wejsciowe do metod zawsze malej 
+        // Nazwy klas lub enumeratorow piszemy z duzej 
+        // nazwy zmiennych wewnatrz metod zawsze z malej litery 
 
-        public double PodajTemperature(string miasto, char jednostkaDocelowa)
+        private void prywatnaMetoda()
         {
+
+        }
+
+        public double PodajTemperature(string miasto, Jednostka jednostkaDocelowa)
+        {      
             const char znak = '°';
             const string znakKoncowy = ">";
-            const char jednostkaWejciowa = 'c';
+            const Jednostka jednostkaWejciowa = Jednostka.Celcjusz;
             const string adresGooglePogoda = "https://www.google.com/search?q=pogoda";
 
+
+            prywatnaMetoda();
 
             string adres = $"{adresGooglePogoda} {miasto}";
             string dane = new WebClient().DownloadString(adres);
@@ -29,7 +40,7 @@ namespace P01ZadanieTemperatury
 
             string wynik = dane.Substring(aktualnaPoz + 1, indx + 1 - aktualnaPoz -2);// -2 znaki bo nie uwzgledniamy jednostki
 
-            TransformatorJednostek tj = new TransformatorJednostek();
+            TransformatorJednostek2 tj = new TransformatorJednostek2();
             double temp= tj.ZamienTemperature(Convert.ToInt32(wynik), jednostkaDocelowa, jednostkaWejciowa);
             
             return temp;
