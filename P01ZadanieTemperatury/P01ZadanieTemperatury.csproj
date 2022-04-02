@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bledy\TooLongStringException.cs" />
     <Compile Include="Bledy\UnsupportedUnitException.cs" />
     <Compile Include="ManagerPogody.cs" />
     <Compile Include="PogodaWalidacja.cs" />

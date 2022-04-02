@@ -11,6 +11,9 @@ namespace P01ZadanieTemperatury
     {
         public Jednostka WalidujJednostke(string jednostka)
         {
+            if (jednostka.Length > 1) 
+                throw new TooLongStringException();
+
             if (jednostka == "c")
                 return Jednostka.Celcjusz;
             if (jednostka == "f")
