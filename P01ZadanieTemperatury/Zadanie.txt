@@ -1,0 +1,3 @@
+﻿
+
+Stworz klase ManagerPogody , ktora bedzie udsotepniac metoda "Podaj temperature" dla danego miasta 
