@@ -1,0 +1,9 @@
+﻿
+
+częśc 1:
+
+Stwórz klasę KalkulatorDodajacy, który umie tylko dodawać. Posiada on metodę Dodaj z dowma argumentami typu int 
+Stwórz klasę KalkulatorOdejmujacy, który umie tylko odejmowac. Posiada on metodę Odejmij z dowma argumentami typu int 
+
+To samo dla mnozenia i dzielenia 
+
